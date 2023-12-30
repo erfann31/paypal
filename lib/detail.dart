@@ -10,6 +10,7 @@ class detail extends StatelessWidget {
     id: 142757,
     category: "Technology",
     dateTime: DateTime(2021, 1, 12),
+    collectData: DateTime(2021, 1, 14, 14, 24),
     orderWeight: 7.5,
     totalProducts: 1,
     productList: [
@@ -18,7 +19,7 @@ class detail extends StatelessWidget {
         name: "Victus 15 FA1093DX-i5 16GB 512SSD RTX3050",
         grouping: "laptop",
         imageUrl:
-        'https://www.gigantti.fi/image/dv_web_D1800010021569395/611459/hp-victus-15-r5-5h8256rx6500m144-hz-pelikannettava--pdp_zoom-3000--pdp_main-960.jpg',
+            'https://www.gigantti.fi/image/dv_web_D1800010021569395/611459/hp-victus-15-r5-5h8256rx6500m144-hz-pelikannettava--pdp_zoom-3000--pdp_main-960.jpg',
       ),
       // Add more Product objects as needed
     ],
@@ -35,9 +36,9 @@ class detail extends StatelessWidget {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),
-        title: const Text(
-          "Order #142757",
-          style: TextStyle(
+        title: Text(
+          "Order #${sampleOrder.id}", // Display Order ID from sampleOrder
+          style: const TextStyle(
             fontWeight: FontWeight.w700,
             fontStyle: FontStyle.normal,
             fontSize: 18,
@@ -55,18 +56,18 @@ class detail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(16, 12, 16, 0),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  "Category: Technology ",
+                  "Category: ${sampleOrder.category}", // Display category from sampleOrder
                   textAlign: TextAlign.start,
                   overflow: TextOverflow.visible,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.normal,
                     fontSize: 16,
@@ -74,10 +75,10 @@ class detail extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "#142757",
+                  "#${sampleOrder.id}", // Display Order ID from sampleOrder
                   textAlign: TextAlign.start,
                   overflow: TextOverflow.visible,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontStyle: FontStyle.normal,
                     fontSize: 14,
@@ -103,7 +104,7 @@ class detail extends StatelessWidget {
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.zero,
                   ),
-                  child: const Align(
+                  child: Align(
                     alignment: Alignment.centerLeft,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -113,10 +114,10 @@ class detail extends StatelessWidget {
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "wheight: 7.5 kg",
+                            "Weight: ${sampleOrder.orderWeight.toStringAsFixed(2)} kg", // Display orderWeight from sampleOrder
                             textAlign: TextAlign.start,
                             overflow: TextOverflow.clip,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.normal,
                               fontSize: 14,
@@ -125,14 +126,14 @@ class detail extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "date: 12 Jan, 2021",
+                              "Date: ${sampleOrder.dateTime.toLocal().toString().split(' ')[0]}", // Display formatted date from sampleOrder
                               textAlign: TextAlign.start,
                               overflow: TextOverflow.clip,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 12,
@@ -142,14 +143,14 @@ class detail extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "Quantity: 15 ",
+                              "Quantity: ${sampleOrder.totalProducts}", // Display totalProducts from sampleOrder
                               textAlign: TextAlign.start,
                               overflow: TextOverflow.clip,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 14,
@@ -159,35 +160,18 @@ class detail extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "collection time: ",
+                              "Collect Data: ${sampleOrder.collectData.day}/${sampleOrder.collectData.month}/${sampleOrder.collectData.year} ${sampleOrder.collectData.hour}:${sampleOrder.collectData.minute}",
                               textAlign: TextAlign.start,
                               overflow: TextOverflow.clip,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
-                                fontSize: 10,
-                                color: Color(0xff6f6f6f),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 2, 0, 10),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "11/2/2021 14:24",
-                              textAlign: TextAlign.start,
-                              overflow: TextOverflow.clip,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontStyle: FontStyle.normal,
-                                fontSize: 15,
-                                color: Color(0xff000000),
+                                fontSize: 12,
+                                color: Color(0xff6a6a6a),
                               ),
                             ),
                           ),
@@ -227,7 +211,6 @@ class detail extends StatelessWidget {
             ),
           ),
           Expanded(
-
             flex: 1,
             child: ListView.builder(
                 padding: const EdgeInsets.all(8),

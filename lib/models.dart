@@ -4,6 +4,7 @@ class Order {
   int id;
   String category;
   DateTime dateTime;
+  DateTime collectData;
   double orderWeight;
   int totalProducts;
   List<Product> productList;
@@ -12,6 +13,7 @@ class Order {
     required this.id,
     required this.category,
     required this.dateTime,
+    required this.collectData,
     required this.orderWeight,
     required this.totalProducts,
     required this.productList,

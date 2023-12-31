@@ -14,29 +14,29 @@ class OrderDetailScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffebebeb),
       appBar: AppBar(
-        elevation: 4,
-        centerTitle: true,
+        elevation: 0,
+        centerTitle: false,
         automaticallyImplyLeading: false,
         backgroundColor: const Color(0xffffffff),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),
-        title: Text(
-          "Order #${sampleOrder.id}", // Display Order ID from sampleOrder
+        title:  Text(
+          "Order #${sampleOrder.id}",
           style: const TextStyle(
             fontWeight: FontWeight.w700,
             fontStyle: FontStyle.normal,
-            fontSize: 18,
-            color: Color(0xff000000),
+            fontSize: 20,
+            color: Color(0xff252525),
           ),
         ),
         leading: GestureDetector(
           onTap: () {
-            Navigator.pop(context); // Pop the current screen when the leading icon is tapped
+            Navigator.pop(context);
           },
           child: const Icon(
             Icons.arrow_back,
-            color: Color(0xff212435),
+            color: Color(0xff252525),
             size: 24,
           ),
         ),
@@ -61,7 +61,7 @@ class OrderDetailScreen extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.normal,
                     fontSize: 16,
-                    color: Color(0xfffb532d),
+                    color: Color(0xff252525),
                   ),
                 ),
                 Text(
@@ -72,7 +72,7 @@ class OrderDetailScreen extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     fontStyle: FontStyle.normal,
                     fontSize: 14,
-                    color: Color(0xff000000),
+                    color: Color(0xff252525),
                   ),
                 ),
               ],
@@ -111,7 +111,7 @@ class OrderDetailScreen extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.normal,
                               fontSize: 14,
-                              color: Color(0xff000000),
+                              color: Color(0xff252525),
                             ),
                           ),
                         ),
@@ -144,7 +144,7 @@ class OrderDetailScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 14,
-                                color: Color(0xff000000),
+                                color: Color(0xff252525),
                               ),
                             ),
                           ),
@@ -177,7 +177,7 @@ class OrderDetailScreen extends StatelessWidget {
                   children: [
                     MaterialButton(
                       onPressed: () {},
-                      color: const Color(0xff000000),
+                      color: const Color(0xff252525),
                       elevation: 3,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),

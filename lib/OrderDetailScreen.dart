@@ -6,24 +6,9 @@ import 'package:pickpal/OrderProductWidget.dart';
 import 'models.dart';
 
 class OrderDetailScreen extends StatelessWidget {
-  Order sampleOrder = Order(
-    id: 142757,
-    category: "Technology",
-    dateTime: DateTime(2021, 1, 12),
-    collectData: DateTime(2021, 1, 14, 14, 24),
-    orderWeight: 7.5,
-    totalProducts: 1,
-    productList: [
-      Product(
-        id: 1,
-        name: "Victus 15 FA1093DX-i5 16GB 512SSD RTX3050",
-        grouping: "laptop",
-        imageUrl:
-            'https://www.gigantti.fi/image/dv_web_D1800010021569395/611459/hp-victus-15-r5-5h8256rx6500m144-hz-pelikannettava--pdp_zoom-3000--pdp_main-960.jpg',
-      ),
-      // Add more Product objects as needed
-    ],
-  );
+  final Order sampleOrder;
+
+  const OrderDetailScreen({required this.sampleOrder});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +30,15 @@ class OrderDetailScreen extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Color(0xff212435),
-          size: 24,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context); // Pop the current screen when the leading icon is tapped
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Color(0xff212435),
+            size: 24,
+          ),
         ),
       ),
       body: Column(

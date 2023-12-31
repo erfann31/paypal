@@ -15,10 +15,15 @@ class ContactUsScreen extends StatelessWidget {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Color(0xff212435),
-          size: 24,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Color(0xff252525),
+            size: 24,
+          ),
         ),
       ),
       body: Padding(
@@ -39,7 +44,7 @@ class ContactUsScreen extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.normal,
                     fontSize: 24,
-                    color: Color(0xfffd542e),
+                    color: Color(0xff252525),
                   ),
                 ),
               ),
@@ -51,7 +56,7 @@ class ContactUsScreen extends StatelessWidget {
                   color: const Color(0xffffffff),
                   shape: BoxShape.rectangle,
                   borderRadius: const BorderRadius.only(topRight: Radius.circular(140.0)),
-                  border: Border.all(color: const Color(0xfffd5630), width: 1),
+                  border: Border.all(color: const Color(0xff252525), width: 1),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(32),
@@ -67,7 +72,7 @@ class ContactUsScreen extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.call,
-                            color: Color(0xfffd5631),
+                            color: Color(0xff252525),
                             size: 24,
                           ),
                           Padding(
@@ -81,7 +86,7 @@ class ContactUsScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 14,
-                                color: Color(0xff000000),
+                                color: Color(0xff252525),
                               ),
                             ),
                           ),
@@ -96,7 +101,7 @@ class ContactUsScreen extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.mail,
-                              color: Color(0xfffc552f),
+                              color: Color(0xff252525),
                               size: 24,
                             ),
                             Padding(
@@ -110,7 +115,7 @@ class ContactUsScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   fontStyle: FontStyle.normal,
                                   fontSize: 14,
-                                  color: Color(0xff000000),
+                                  color: Color(0xff252525),
                                 ),
                               ),
                             ),
@@ -124,7 +129,7 @@ class ContactUsScreen extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.location_on,
-                            color: Color(0xfffe542e),
+                            color: Color(0xff252525),
                             size: 24,
                           ),
                           Expanded(
@@ -140,7 +145,7 @@ class ContactUsScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   fontStyle: FontStyle.normal,
                                   fontSize: 14,
-                                  color: Color(0xff000000),
+                                  color: Color(0xff252525),
                                 ),
                               ),
                             ),
@@ -165,20 +170,20 @@ class ContactUsScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   fontStyle: FontStyle.normal,
                                   fontSize: 12,
-                                  color: Color(0xff000000),
+                                  color: Color(0xff252525),
                                 ),
                                 decoration: InputDecoration(
                                   disabledBorder: UnderlineInputBorder(
                                     borderRadius: BorderRadius.circular(4.0),
-                                    borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                    borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                   ),
                                   focusedBorder: UnderlineInputBorder(
                                     borderRadius: BorderRadius.circular(4.0),
-                                    borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                    borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                   ),
                                   enabledBorder: UnderlineInputBorder(
                                     borderRadius: BorderRadius.circular(4.0),
-                                    borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                    borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                   ),
                                   hintText: "Name",
                                   hintStyle: const TextStyle(
@@ -207,20 +212,20 @@ class ContactUsScreen extends StatelessWidget {
                                     fontWeight: FontWeight.w400,
                                     fontStyle: FontStyle.normal,
                                     fontSize: 12,
-                                    color: Color(0xff000000),
+                                    color: Color(0xff252525),
                                   ),
                                   decoration: InputDecoration(
                                     disabledBorder: UnderlineInputBorder(
                                       borderRadius: BorderRadius.circular(4.0),
-                                      borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                      borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                     ),
                                     focusedBorder: UnderlineInputBorder(
                                       borderRadius: BorderRadius.circular(4.0),
-                                      borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                      borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                     ),
                                     enabledBorder: UnderlineInputBorder(
                                       borderRadius: BorderRadius.circular(4.0),
-                                      borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                      borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                     ),
                                     hintText: "Email",
                                     hintStyle: const TextStyle(
@@ -258,20 +263,20 @@ class ContactUsScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   fontStyle: FontStyle.normal,
                                   fontSize: 12,
-                                  color: Color(0xff000000),
+                                  color: Color(0xff252525),
                                 ),
                                 decoration: InputDecoration(
                                   disabledBorder: UnderlineInputBorder(
                                     borderRadius: BorderRadius.circular(4.0),
-                                    borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                    borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                   ),
                                   focusedBorder: UnderlineInputBorder(
                                     borderRadius: BorderRadius.circular(4.0),
-                                    borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                    borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                   ),
                                   enabledBorder: UnderlineInputBorder(
                                     borderRadius: BorderRadius.circular(4.0),
-                                    borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                                    borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                                   ),
                                   hintText: "Message",
                                   hintStyle: const TextStyle(
@@ -294,12 +299,15 @@ class ContactUsScreen extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                         child: MaterialButton(
                           onPressed: () {},
-                          color: const Color(0xfffe5731),
+                          color: const Color(0xff252525),
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           padding: const EdgeInsets.all(16),
+                          textColor: const Color(0xffffffff),
+                          height: 45,
+                          minWidth: 140,
                           child: const Text(
                             "Send Message",
                             style: TextStyle(
@@ -308,9 +316,6 @@ class ContactUsScreen extends StatelessWidget {
                               fontStyle: FontStyle.normal,
                             ),
                           ),
-                          textColor: const Color(0xffffffff),
-                          height: 45,
-                          minWidth: 140,
                         ),
                       ),
                     ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'OrderDetailScreen.dart';
 import 'models.dart';
 
 class OrderInformationWidget extends StatelessWidget {
@@ -81,26 +82,36 @@ class OrderInformationWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
-                Container(
-                  alignment: Alignment.center,
-                  margin: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-                  padding: EdgeInsets.zero,
-                  width: MediaQuery.of(context).size.width * 0.20,
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  decoration: BoxDecoration(
-                    color: const Color(0xff000000),
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(22.0),
-                  ),
-                  child: const Text(
-                    "view",
-                    textAlign: TextAlign.start,
-                    overflow: TextOverflow.clip,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontStyle: FontStyle.normal,
-                      fontSize: 16,
-                      color: Color(0xffffffff),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OrderDetailScreen(sampleOrder: sampleOrder,),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                    padding: EdgeInsets.zero,
+                    width: MediaQuery.of(context).size.width * 0.20,
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff000000),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(22.0),
+                    ),
+                    child: const Text(
+                      "view",
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.clip,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 16,
+                        color: Color(0xffffffff),
+                      ),
                     ),
                   ),
                 ),

@@ -13,7 +13,7 @@ class OrderInformationWidget extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 10),
       color: const Color(0xffffffff),
-      shadowColor: const Color(0xff000000),
+      shadowColor: const Color(0xff252525),
       elevation: 1,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
@@ -42,7 +42,7 @@ class OrderInformationWidget extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         fontStyle: FontStyle.normal,
                         fontSize: 14,
-                        color: Color(0xff000000),
+                        color: Color(0xff252525),
                       ),
                     ),
                     Padding(
@@ -98,7 +98,7 @@ class OrderInformationWidget extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.20,
                     height: MediaQuery.of(context).size.height * 0.06,
                     decoration: BoxDecoration(
-                      color: const Color(0xff000000),
+                      color: const Color(0xff252525),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.circular(22.0),
                     ),

@@ -17,7 +17,7 @@ class OrderProductWidget extends StatelessWidget {
       child: Card(
         margin: const EdgeInsets.all(0),
         color: const Color(0xffffffff),
-        shadowColor: const Color(0xff000000),
+        shadowColor: const Color(0xff252525),
         elevation: 1,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
@@ -56,7 +56,7 @@ class OrderProductWidget extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         fontStyle: FontStyle.normal,
                         fontSize: 16,
-                        color: Color(0xff000000),
+                        color: Color(0xff252525),
                       ),
                     ),
                     Padding(
@@ -70,7 +70,7 @@ class OrderProductWidget extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
                           fontSize: 11,
-                          color: Color(0xff000000),
+                          color: Color(0xff252525),
                         ),
                       ),
                     ),
@@ -93,20 +93,20 @@ class OrderProductWidget extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontStyle: FontStyle.normal,
                         fontSize: 12,
-                        color: Color(0xff000000),
+                        color: Color(0xff252525),
                       ),
                       decoration: InputDecoration(
                         disabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(4.0),
-                          borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                          borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(4.0),
-                          borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                          borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                         ),
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(4.0),
-                          borderSide: const BorderSide(color: Color(0xff000000), width: 1),
+                          borderSide: const BorderSide(color: Color(0xff252525), width: 1),
                         ),
                         hintText: "Enter Code",
                         hintStyle: const TextStyle(
@@ -127,7 +127,7 @@ class OrderProductWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: MaterialButton(
                     onPressed: () {},
-                    color: const Color(0xff000000),
+                    color: const Color(0xff252525),
                     elevation: 3,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),

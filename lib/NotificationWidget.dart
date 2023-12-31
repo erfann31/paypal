@@ -44,7 +44,7 @@ class NotificationWidget extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         fontStyle: FontStyle.normal,
                         fontSize: 14,
-                        color: Color(0xff000000),
+                        color: Color(0xff252525),
                       ),
                     ),
                     Padding(
@@ -70,7 +70,7 @@ class NotificationWidget extends StatelessWidget {
               margin: const EdgeInsets.all(0),
               padding: const EdgeInsets.all(10),
               decoration: const BoxDecoration(
-                color: Color(0xffff5630),
+                color: Color(0xff252525),
                 shape: BoxShape.circle,
               ),
               child: Icon(

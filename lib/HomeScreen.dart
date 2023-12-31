@@ -7,7 +7,6 @@ import 'package:pickpal/SettingScreen.dart';
 
 import 'OrderInformationWidget.dart';
 import 'consts.dart';
-import 'models.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -28,7 +27,7 @@ class HomeScreen extends StatelessWidget {
             fontWeight: FontWeight.w700,
             fontStyle: FontStyle.normal,
             fontSize: 20,
-            color: Color(0xff000000),
+            color: Color(0xff252525),
           ),
         ),
         leading: GestureDetector(
@@ -58,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: const Icon(Icons.history, color: Color(0xff212435), size: 24),
+              child: const Icon(Icons.history, color: Color(0xff252525), size: 24),
             ),
           ),
           Padding(
@@ -72,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: const Icon(Icons.settings, color: Color(0xff212435), size: 24),
+              child: const Icon(Icons.settings, color: Color(0xff252525), size: 24),
             ),
           ),
         ],

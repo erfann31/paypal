@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.normal,
                     fontSize: 24,
-                    color: Color(0xff000000),
+                    color: Color(0xff252525),
                   ),
                 ),
                 Padding(
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.normal,
                       fontSize: 14,
-                      color: Color(0xff000000),
+                      color: Color(0xff252525),
                     ),
                     decoration: InputDecoration(
                       disabledBorder: OutlineInputBorder(
@@ -80,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.normal,
                       fontSize: 14,
-                      color: Color(0xff000000),
+                      color: Color(0xff252525),
                     ),
                     decoration: InputDecoration(
                       disabledBorder: OutlineInputBorder(
@@ -120,7 +120,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    color: const Color(0xffff5630),
+                    color: const Color(0xff252525),
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0),

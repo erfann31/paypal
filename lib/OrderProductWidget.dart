@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'models.dart';
 
-class OrderProductCard extends StatelessWidget {
+class OrderProductWidget extends StatelessWidget {
   final Product pro;
 
-  const OrderProductCard({
+  const OrderProductWidget({
     Key? key,
     required this.pro,
   }) : super(key: key);

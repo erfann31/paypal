@@ -1,11 +1,11 @@
 ///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
-import 'package:pickpal/product_model.dart';
+import 'package:pickpal/OrderProductWidget.dart';
 
 import 'models.dart';
 
-class detail extends StatelessWidget {
+class OrderDetailScreen extends StatelessWidget {
   Order sampleOrder = Order(
     id: 142757,
     category: "Technology",
@@ -218,7 +218,7 @@ class detail extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: sampleOrder!.productList!.length,
                 itemBuilder: (BuildContext context, int i) {
-                  return OrderProductCard(
+                  return OrderProductWidget(
                     pro: sampleOrder!.productList![i],
                   );
                 }),

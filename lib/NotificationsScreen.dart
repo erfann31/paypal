@@ -2,34 +2,12 @@
 
 import 'package:flutter/material.dart';
 
+import 'consts.dart';
 import 'models.dart';
-import 'notif_model.dart';
-List<NotificationModel> generateNotificationList() {
-  List<NotificationModel> notifications = [
-    NotificationModel(
-      id: 1,
-      title: "New Message",
-      description: "You have received a new message.",
-      icon: Icons.message, // Use Icons.message for the message icon
-    ),
-    NotificationModel(
-      id: 2,
-      title: "Reminder",
-      description: "Don't forget about the meeting at 2 PM.",
-      icon: Icons.event, // Use Icons.event for the reminder icon (modify as needed)
-    ),
-    NotificationModel(
-      id: 3,
-      title: "Update Available",
-      description: "A new version of the app is available for download.",
-      icon: Icons.update, // Use Icons.update (modify as needed)
-    ),
-    // Add more notifications as needed
-  ];
-  return notifications;
-}
+import 'NotificationWidget.dart';
 
-class notifications extends StatelessWidget {
+
+class NotificationsScreen extends StatelessWidget {
 
   List<NotificationModel> notificationsList = generateNotificationList();
 
@@ -77,7 +55,7 @@ class notifications extends StatelessWidget {
                       shrinkWrap: true,
                       itemCount: notificationsList!.length,
                       itemBuilder: (BuildContext context, int i) {
-                        return NotificationCard(
+                        return NotificationWidget(
                           notification:  notificationsList![i],
                         );
                       }),

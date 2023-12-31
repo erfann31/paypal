@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'models.dart'; // Assuming your NotificationModel is defined in models.dart
 
-class NotificationCard extends StatelessWidget {
+class NotificationWidget extends StatelessWidget {
   final NotificationModel notification;
 
-  const NotificationCard({
+  const NotificationWidget({
     Key? key,
     required this.notification,
   }) : super(key: key);

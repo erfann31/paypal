@@ -1,7 +1,7 @@
 ///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
-import 'package:pickpal/History.dart';
+import 'package:pickpal/HistoryScreen.dart';
 import 'package:pickpal/LoginScreen.dart';
 import 'package:pickpal/SettingScreen.dart';
 

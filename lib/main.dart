@@ -11,7 +11,7 @@ import 'NotificationsScreen.dart';
 import 'NotificationSettingScreen.dart';
 import 'SettingScreen.dart';
 import 'HomeScreen.dart';
-import 'History.dart';
+import 'HistoryScreen.dart';
 
 void main() {
   runApp(MyApp());

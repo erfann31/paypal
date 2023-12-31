@@ -6,9 +6,7 @@ import 'consts.dart';
 import 'models.dart';
 import 'NotificationWidget.dart';
 
-
 class NotificationsScreen extends StatelessWidget {
-
   List<NotificationModel> notificationsList = generateNotificationList();
 
   @override
@@ -16,8 +14,8 @@ class NotificationsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       appBar: AppBar(
-        elevation: 4,
-        centerTitle: true,
+        elevation: 0,
+        centerTitle: false,
         automaticallyImplyLeading: false,
         backgroundColor: const Color(0xffffffff),
         shape: const RoundedRectangleBorder(
@@ -29,13 +27,18 @@ class NotificationsScreen extends StatelessWidget {
             fontWeight: FontWeight.w700,
             fontStyle: FontStyle.normal,
             fontSize: 20,
-            color: Color(0xff000000),
+            color: Color(0xff252525),
           ),
         ),
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Color(0xff212435),
-          size: 24,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Color(0xff252525),
+            size: 24,
+          ),
         ),
       ),
       body: Stack(
@@ -56,7 +59,7 @@ class NotificationsScreen extends StatelessWidget {
                       itemCount: notificationsList!.length,
                       itemBuilder: (BuildContext context, int i) {
                         return NotificationWidget(
-                          notification:  notificationsList![i],
+                          notification: notificationsList![i],
                         );
                       }),
                 ],

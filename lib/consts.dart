@@ -30,18 +30,19 @@ List<Order> ordersList = [
         id: 2,
         name: "Sony Noise Cancelling Headphones",
         grouping: "headphones",
-        imageUrl: 'https://www.example.com/headphones.jpg',
+        imageUrl: 'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_114088091?x=600&y=450&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=600&ey=450&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=600&cdy=450',
       ),
       Product(
         id: 3,
         name: "Samsung 55-inch Smart TV",
         grouping: "TV",
-        imageUrl: 'https://www.example.com/smart-tv.jpg',
+        imageUrl: 'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_98590398?x=600&y=450&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=600&ey=450&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=600&cdy=450',
       ),
     ],
   ),
   // Add more Order objects as needed
 ];
+
 List<NotificationModel> generateNotificationList() {
   List<NotificationModel> notifications = [
     NotificationModel(

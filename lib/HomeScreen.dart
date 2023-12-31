@@ -1,6 +1,9 @@
 ///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
+import 'package:pickpal/History.dart';
+import 'package:pickpal/LoginScreen.dart';
+import 'package:pickpal/SettingScreen.dart';
 
 import 'OrderInformationWidget.dart';
 import 'consts.dart';
@@ -28,19 +31,49 @@ class HomeScreen extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        leading: const Icon(
-          Icons.login,
-          color: Color(0xffab0003),
-          size: 24,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LoginScreen(),
+              ),
+            );
+          },
+          child: const Icon(
+            Icons.login,
+            color: Color(0xffab0003),
+            size: 24,
+          ),
         ),
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
-            child: Icon(Icons.history, color: Color(0xff212435), size: 24),
+            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HistoryScreen(),
+                  ),
+                );
+              },
+              child: const Icon(Icons.history, color: Color(0xff212435), size: 24),
+            ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-            child: Icon(Icons.settings, color: Color(0xff212435), size: 24),
+            padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingScreen(),
+                  ),
+                );
+              },
+              child: const Icon(Icons.settings, color: Color(0xff212435), size: 24),
+            ),
           ),
         ],
       ),

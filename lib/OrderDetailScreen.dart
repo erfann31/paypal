@@ -21,7 +21,7 @@ class OrderDetailScreen extends StatelessWidget {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),
-        title:  Text(
+        title: Text(
           "Order #${sampleOrder.id}",
           style: const TextStyle(
             fontWeight: FontWeight.w700,
@@ -41,168 +41,167 @@ class OrderDetailScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Text(
-                  "Category: ${sampleOrder.category}", // Display category from sampleOrder
-                  textAlign: TextAlign.start,
-                  overflow: TextOverflow.visible,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.normal,
-                    fontSize: 16,
-                    color: Color(0xff252525),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Text(
+                    "Category: ${sampleOrder.category}", // Display category from sampleOrder
+                    textAlign: TextAlign.start,
+                    overflow: TextOverflow.visible,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 16,
+                      color: Color(0xff252525),
+                    ),
                   ),
-                ),
-                Text(
-                  "#${sampleOrder.id}", // Display Order ID from sampleOrder
-                  textAlign: TextAlign.start,
-                  overflow: TextOverflow.visible,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.normal,
-                    fontSize: 14,
-                    color: Color(0xff252525),
+                  Text(
+                    "#${sampleOrder.id}", // Display Order ID from sampleOrder
+                    textAlign: TextAlign.start,
+                    overflow: TextOverflow.visible,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 14,
+                      color: Color(0xff252525),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Container(
-                  margin: const EdgeInsets.all(0),
-                  padding: const EdgeInsets.all(0),
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  decoration: const BoxDecoration(
-                    color: Color(0x00000000),
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.zero,
-                  ),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Weight: ${sampleOrder.orderWeight.toStringAsFixed(2)} kg", // Display orderWeight from sampleOrder
-                            textAlign: TextAlign.start,
-                            overflow: TextOverflow.clip,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.normal,
-                              fontSize: 14,
-                              color: Color(0xff252525),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
-                          child: Align(
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.all(0),
+                    padding: const EdgeInsets.all(0),
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    decoration: const BoxDecoration(
+                      color: Color(0x00000000),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.zero,
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "Date: ${sampleOrder.dateTime.toLocal().toString().split(' ')[0]}", // Display formatted date from sampleOrder
+                              "Weight: ${sampleOrder.orderWeight.toStringAsFixed(2)} kg", // Display orderWeight from sampleOrder
                               textAlign: TextAlign.start,
                               overflow: TextOverflow.clip,
                               style: const TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontStyle: FontStyle.normal,
-                                fontSize: 12,
-                                color: Color(0xff6a6a6a),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Quantity: ${sampleOrder.totalProducts}", // Display totalProducts from sampleOrder
-                              textAlign: TextAlign.start,
-                              overflow: TextOverflow.clip,
-                              style: const TextStyle(
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w700,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 14,
                                 color: Color(0xff252525),
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Collect Data: ${sampleOrder.collectData.day}/${sampleOrder.collectData.month}/${sampleOrder.collectData.year} ${sampleOrder.collectData.hour}:${sampleOrder.collectData.minute}",
-                              textAlign: TextAlign.start,
-                              overflow: TextOverflow.clip,
-                              style: const TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontStyle: FontStyle.normal,
-                                fontSize: 12,
-                                color: Color(0xff6a6a6a),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Date: ${sampleOrder.dateTime.toLocal().toString().split(' ')[0]}", // Display formatted date from sampleOrder
+                                textAlign: TextAlign.start,
+                                overflow: TextOverflow.clip,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 12,
+                                  color: Color(0xff6a6a6a),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Quantity: ${sampleOrder.totalProducts}", // Display totalProducts from sampleOrder
+                                textAlign: TextAlign.start,
+                                overflow: TextOverflow.clip,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 14,
+                                  color: Color(0xff252525),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Collect Data: ${sampleOrder.collectData.day}/${sampleOrder.collectData.month}/${sampleOrder.collectData.year} ${sampleOrder.collectData.hour}:${sampleOrder.collectData.minute}",
+                                textAlign: TextAlign.start,
+                                overflow: TextOverflow.clip,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 12,
+                                  color: Color(0xff6a6a6a),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    MaterialButton(
-                      onPressed: () {},
-                      color: const Color(0xff252525),
-                      elevation: 3,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      padding: const EdgeInsets.all(16),
-                      textColor: const Color(0xffffffff),
-                      height: MediaQuery.of(context).size.height * 0.06,
-                      minWidth: MediaQuery.of(context).size.width * 0.25,
-                      child: const Text(
-                        "Collect",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      MaterialButton(
+                        onPressed: () {},
+                        color: const Color(0xff252525),
+                        elevation: 3,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        padding: const EdgeInsets.all(16),
+                        textColor: const Color(0xffffffff),
+                        height: MediaQuery.of(context).size.height * 0.06,
+                        minWidth: MediaQuery.of(context).size.width * 0.25,
+                        child: const Text(
+                          "Collect",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            fontStyle: FontStyle.normal,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: ListView.builder(
+            ListView.builder(
                 padding: const EdgeInsets.all(8),
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
@@ -212,8 +211,8 @@ class OrderDetailScreen extends StatelessWidget {
                     pro: sampleOrder!.productList![i],
                   );
                 }),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -174,7 +174,7 @@ class ChangePasswordScreen extends StatelessWidget {
                   height: 50,
                   minWidth: MediaQuery.of(context).size.width,
                   child: const Text(
-                    "Continue",
+                    "Submit",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,

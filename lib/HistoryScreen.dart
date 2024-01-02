@@ -10,8 +10,8 @@ class HistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double totalWeight = ordersList.fold(0, (previousValue, order) => previousValue + order.orderWeight);
-    int totalProducts = ordersList.fold(0, (previousValue, order) => previousValue + order.totalProducts);
+    double totalWeight = collectOrdersList.fold(0, (previousValue, order) => previousValue + order.orderWeight);
+    int totalProducts = collectOrdersList.fold(0, (previousValue, order) => previousValue + order.totalProducts);
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       appBar: AppBar(
@@ -149,10 +149,10 @@ class HistoryScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(8),
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: ordersList!.length,
+                  itemCount: collectOrdersList!.length,
                   itemBuilder: (BuildContext context, int i) {
                     return OrderInformationWidget(
-                      sampleOrder: ordersList![i],
+                      sampleOrder: collectOrdersList![i],
                     );
                   }),
             ],
